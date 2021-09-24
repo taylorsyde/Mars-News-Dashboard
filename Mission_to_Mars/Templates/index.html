@@ -53,14 +53,13 @@
             <p class="card-text">Check out the latest images from Mars.</p>
           </div>
         </div>
+        
+        <br>
+        <div class="table table-danger table-center table-responsive-md table-striped" width = "100%">
+            {{ mars.table|safe }}
+        </div>
       </div>
 
-    </div>
-
-    <div class="row">
-      <div class='col-md-6'>
-        {mars.html_table}
-      </div>
     </div>
 
 

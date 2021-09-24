@@ -2,6 +2,7 @@
 from splinter import Browser
 from bs4 import BeautifulSoup as bs
 from webdriver_manager.chrome import ChromeDriverManager
+import pandas as pd
 
 def scrape():   
     # browser = init_browser()
@@ -26,7 +27,7 @@ def scrape():
     
     # loop thru results and create a dic for the latest 4 mars stories
     # add each story to the articles list and print 
-    for item in results[:3]:
+    for item in results[:4]:
         story = {}
         story["headline"] = item.find('div',class_="content_title").get_text()
         story["tagline"] = item.find("div", class_="article_teaser_body").get_text()
