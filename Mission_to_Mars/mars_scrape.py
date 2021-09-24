@@ -92,7 +92,8 @@ def scrape():
     table_df = table_df.rename(columns={1 : "Mars", 2: "Earth"})
     table_df = table_df.drop(index='Mars - Earth Comparison')
     
-    html_table = table_df.to_html()
+    html_table = table_df.to_html(index_names=False,
+                                  classes='table table-responsive-sm table-danger table-hover')
     
     print('Table scraped successfully.')
 

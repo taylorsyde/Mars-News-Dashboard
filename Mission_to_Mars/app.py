@@ -24,6 +24,9 @@ def home():
 @app.route("/scrape")
 def scrape():
 
+    #drop database if there
+    mongo.db.collection.drop()
+
     # Run the scrape function
     mars_data = mars_scrape.scrape()
 
