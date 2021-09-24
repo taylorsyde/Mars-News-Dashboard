@@ -33,7 +33,7 @@ def scrape():
         story["tagline"] = item.find("div", class_="article_teaser_body").get_text()
         articles.append(story)
 
-    print('News scraped successfully.')
+    print('News scraped successfully.----------------------')
        
     # HEMI SCRAPE -------------------------------------------------------   
     #hemisphere images scrape source
@@ -62,7 +62,7 @@ def scrape():
         browser.back()
         hemispheres.append(mars)
     
-    print('Hemispheres scraped successfully.')
+    print('Hemispheres scraped successfully.----------------------')
     
     # FEATURED IMAGE SCRAPE ------------------------------------------------------- 
     #hemisphere images scrape source
@@ -75,7 +75,7 @@ def scrape():
 
     featured_img_url = jpl_url + jpl_soup.find(class_='floating_text_area').a['href']
     
-    print('Image of the Day scraped successfully.')
+    print('Image of the Day scraped successfully.----------------------')
 
     # TABLE SCRAPE -------------------------------------------------------
     #hemisphere images scrape source
@@ -92,10 +92,10 @@ def scrape():
     table_df = table_df.rename(columns={1 : "Mars", 2: "Earth"})
     table_df = table_df.drop(index='Mars - Earth Comparison')
     
-    html_table = table_df.to_html(index_names=False,
+    html_table = table_df.to_html(index_names=False, justify='left',
                                   classes='table table-responsive-sm table-danger table-hover')
     
-    print('Table scraped successfully.')
+    print('Table scraped successfully. ----------------------')
 
     # quit the browser
     browser.quit()
