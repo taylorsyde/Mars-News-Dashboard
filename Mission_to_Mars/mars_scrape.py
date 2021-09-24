@@ -77,9 +77,24 @@ def scrape():
     print('Image of the Day scraped successfully.')
 
     # TABLE SCRAPE -------------------------------------------------------
+    #hemisphere images scrape source
+    table_url = "https://galaxyfacts-mars.com/"
+    browser.visit(table_url)
+
+    #extract html and parse with beautifulsoup
+    table_html = browser.html
+    table_soup = bs(table_html, "html.parser")
     
+    table_src = pd.read_html(table_url)
+    table_df = table_src[0]
+    table_df = table_df.set_index([0])
+    table_df = table_df.rename(columns={1 : "Mars", 2: "Earth"})
+    table_df = table_df.drop(index='Mars - Earth Comparison')
     
+    html_table = table_df.to_html()
     
+    print('Table scraped successfully.')
+
     # quit the browser
     browser.quit()
     
@@ -87,7 +102,8 @@ def scrape():
     mars_data = {
         'featured_img_url': featured_img_url,
         'hemispheres': hemispheres,
-        'articles': articles    
+        'articles': articles,
+        'table': html_table   
     }
     
     return mars_data
