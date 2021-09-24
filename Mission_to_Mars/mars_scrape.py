@@ -26,7 +26,7 @@ def scrape():
     
     # loop thru results and create a dic for the latest 4 mars stories
     # add each story to the articles list and print 
-    for item in results[:2]:
+    for item in results[:3]:
         story = {}
         story["headline"] = item.find('div',class_="content_title").get_text()
         story["tagline"] = item.find("div", class_="article_teaser_body").get_text()
@@ -85,8 +85,8 @@ def scrape():
     
     # RETURN DATA  -------------------------------------------------------
     mars_data = {
-        #'featured_img_url': featured_img_url,
-        #'hemispheres': hemispheres,
+        'featured_img_url': featured_img_url,
+        'hemispheres': hemispheres,
         'articles': articles    
     }
     
