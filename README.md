@@ -2,7 +2,7 @@
 
 This simple web dashboard scrapes various websites for data related to Mars, stores it locally in a Mongo database and displays the information in a single HTML page.
 
-![mission_to_mars](/Mission_to_Mars/Images/app_screenshot.jpg?raw=true)
+![mission_to_mars](https://github.com/taylorsyde/Mars-News-Dashboard/blob/main/Mission_to_Mars/Images/app_screenshot.jpg?raw=true)
 
 ## Step 1 - Scraping
 
