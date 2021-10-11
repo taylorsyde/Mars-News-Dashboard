@@ -1,9 +1,8 @@
-# Web Scraping Homework - Mission to Mars
+# Mission to Mars
 
-![mission_to_mars](Images/mission_to_mars.png)
+This simple web dashboard scrapes various websites for data related to Mars, stores it locally in a Mongo database and displays the information in a single HTML page.
 
-In this assignment, you will build a web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page. The following outlines what you need to do.
-
+![mission_to_mars](./Mission_to_Mars/Images/app_screenshot.jpg)
 
 ## Step 1 - Scraping
 
