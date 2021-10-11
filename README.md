@@ -1,10 +1,14 @@
 # Mission to Mars
 
-This simple web dashboard scrapes various websites for data related to Mars, stores it locally in a Mongo database and displays the information in a single HTML page.
+This simple web application complies Mars News from various websites, stores it locally in a Mongo database, and displays the information in a single HTML page. Fans of the Dear Hank and John podcast will find this partically useful. 
 
 ![mission_to_mars](https://github.com/taylorsyde/Mars-News-Dashboard/blob/main/Mission_to_Mars/Images/app_screenshot.JPG)
 
-## Step 1 - Scraping
+## Details
+- Displayed the 4 most recent Mars news stories from [Red Planet Science](https://redplanetscience.com.)
+- Utlizies beautifulsoup to scrape information from 4 different websites.
+- Stores data locally in a Mongo database.
+- Deployed using Flask 
 
 Complete your initial scraping using Jupyter Notebook, BeautifulSoup, Pandas, and Requests/Splinter.
 
